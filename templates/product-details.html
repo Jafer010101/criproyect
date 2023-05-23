@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Estilos específicos para esta página pueden ir aquí */
+        .product-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .product-details img {
+            max-width: 400px;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .product-details-content {
+            text-align: left;
+        }
+
+        .product-details h3 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .product-details p {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .product-details span {
+            font-weight: bold;
+        }
+
+        .product-details .btn {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .product-details .btn:hover {
+            background-color: #ffffff;
+            color: #ff69b4;
+        }
+    </style>
+    <script>
+        function imprimirPantalla() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <h1>Detalles del Producto</h1>
+    <div class="product-details">
+        <img src="{{ imagen }}" alt="{{ nombre }}">
+        <div class="product-details-content">
+            <h3>{{ nombre }}</h3>
+            <p>Precio: <span>{{ precio }}</span></p>
+            <p>{{ descripcion }}</p>
+            <button onclick="imprimirPantalla()" class="btn">Comprar ahora</button>
+        </div>
+    </div>
+</body>
+</html>

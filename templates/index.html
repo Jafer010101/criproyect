@@ -1,30 +1,37 @@
 <!doctype html>
-<head>
-    <title>Hello Azure - Python Quickstart</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-</head>
 <html>
-   <body>
-     <main>
-        <div class="px-4 py-3 my-2 text-center">
-            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/azure-icon.svg') }}" alt="Azure Logo" width="192" height="192"/>
-            <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-            <h1 class="display-6 fw-bold text-primary">Welcome to Azure</h1>            
-          </div>
-        <form method="post" action="{{url_for('hello')}}">
-            <div class="col-md-6 mx-auto text-center">
-                <label for="name" class="form-label fw-bold fs-5">Could you please tell me your name?</label>
-
-                <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
-                    <input type="text" class="form-control" id="name" name="name" style="max-width: 256px;">
-                  </div>            
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Say Hello</button>
-                </div>            
-            </div>
-        </form>
-     </main>      
-   </body>
+<head>
+    <title>Tienda de Maquillaje</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Estilos específicos para esta página pueden ir aquí */
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/378/022/original/woman-face-logo-free-vector.jpg" alt="Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/tienda.html" class="navbar-link">Tienda</a>
+            <a href="#" class="navbar-link">Información</a>
+            <a href="#" class="navbar-link">Más</a>
+        </div>
+    </nav>
+    <div class="section section1">
+        <div class="section-content">
+            <h2 style="font-size:80px;font-family: Arial; color: aliceblue;">Tienda de Maquillaje</h2>
+            <p style="font-size:20px;font-family: Arial;">Bienvenido a nuestra tienda de maquillaje. Tenemos una amplia selección de productos de belleza para ti.</p>
+            <button class="btn">Ver productos</button>
+        </div>
+    </div>
+    <div class="section section2">
+        <div class="section-content">
+            <h2 style="font-size:80px;font-family: Arial; color: aliceblue;">Últimas tendencias</h2>
+            <p style="font-size:20px;font-family: Arial;">Descubre las últimas tendencias en maquillaje y mantente actualizado con nuestros consejos de belleza.</p>
+            <button class="btn">Ver más</button>
+        </div>
+    </div>
+</body>
 </html>

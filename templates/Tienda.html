@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tienda - Tienda de Maquillaje</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        /* Estilos específicos para esta página pueden ir aquí */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .item {
+            max-width: 300px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .item h3 {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        .item p {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .item span {
+            font-weight: bold;
+        }
+
+        .item a {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .item a.button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .item a.button:hover {
+            background-color: #ffffff;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/002/378/022/original/woman-face-logo-free-vector.jpg" alt="Logo">
+        </div>
+        <div class="navbar-links">
+            <a href="/" class="navbar-link">Home</a>
+            <a href="/tienda.html" class="navbar-link active">Tienda</a>
+            <a href="#" class="navbar-link">Información</a>
+            <a href="#" class="navbar-link">Más</a>
+        </div>
+    </nav>
+    <h1 style="font-size: 40px; text-align: center;">Bienvenido a nuestra tienda</h1>
+    <p style="font-size: 20px; text-align: center;">Aquí encontrarás una amplia selección de productos de maquillaje.</p>
+
+    <div class="gallery">
+        <div class="item" onclick="showProductDetails('Mascarilla', 'https://http2.mlstatic.com/D_NQ_NP_912984-MCO45049648781_032021-O.webp', '80', 'Mascarilla para espinillas, tratamiento instantaneo')">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_912984-MCO45049648781_032021-O.webp" alt="Producto 1">
+            <h3>Mascarilla</h3>
+            <p>Precio: <span>$80</span></p>
+            <p>Mascarilla para espinillas, tratamiento instantaneo</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <div class="item" onclick="showProductDetails('Enchinador de pestañas', 'https://m.media-amazon.com/images/I/51pm3Mqj8nL._AC_SY355_.jpg', '50', 'Enchinador de pestañas una pieza.')">
+            <img src="https://m.media-amazon.com/images/I/51pm3Mqj8nL._AC_SY355_.jpg" alt="Producto 2">
+            <h3>Enchinador de pestañas</h3>
+            <p>Precio: <span>$50</span></p>
+            <p>Enchinador de pestañas una pieza.</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <div class="item" onclick="showProductDetails('Lápiz para cejas', 'https://cdn.shopify.com/s/files/1/0083/6806/2549/products/802_Dark_Brown_1200x1200.jpg?v=1597945331', '30', 'Lapiz para ceja color negro intenso')">
+            <img src="https://cdn.shopify.com/s/files/1/0083/6806/2549/products/802_Dark_Brown_1200x1200.jpg?v=1597945331" alt="Producto 3">
+            <h3>Lápiz para cejas</h3>
+            <p>Precio: <span>$30</span></p>
+            <p>Lápiz para ceja color negro intenso</p>
+            <a href="#" class="button">Comprar</a>
+        </div>
+        <!-- Agregar aquí los demás elementos de la galería -->
+        <!-- Recuerda reemplazar URL_IMAGEN, Producto X, $X y Descripción del producto X con la información correcta -->
+    </div>
+
+    <script>
+        function showProductDetails(nombre, imagen, precio, descripcion) {
+            // Redirigir a la página de detalles del producto con la imagen y la información
+            window.location.href = '/product-details.html?nombre=' + encodeURIComponent(nombre) + '&imagen=' + encodeURIComponent(imagen) + '&precio=' + encodeURIComponent(precio) + '&descripcion=' + encodeURIComponent(descripcion);
+        }
+    </script>
+</body>
+</html>

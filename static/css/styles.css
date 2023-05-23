@@ -1,0 +1,69 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    font-family: 'Ebrima', sans-serif;
+    background-color: #ffffff;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 60px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: #000000;
+    font-weight: normal;
+}
+
+/* Estilos para las secciones */
+.section {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section-content {
+    margin-left: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    color: #000000;
+}
+
+.section1 {
+    background-image: url("https://www.vichy.es/site/pages/showImageResized.aspx?EncMediaId=N2JIVzEwZTJGb0ZPNGZ6cWsyWXZkZz09&ImageFormatAppCode=IF_PRODUCTLISTV4_HEADER_DKP_1920_580&v=220235025021");
+}
+
+.section2 {
+    background-image: url("https://tubellezamk.es/wp-content/uploads/2023/03/orden-maquillaje.jpg");
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border: none;
+    color: #ff69b4;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff69b4;
+    color: #ffffff;
+}
