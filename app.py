@@ -6,10 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/tienda.html', methods=['GET'])
+@app.route('/tienda.html')
 def tienda():
     return render_template('tienda.html')
-
 
 @app.route('/product-details.html', methods=['GET', 'POST'])
 def product_details():
@@ -18,9 +17,8 @@ def product_details():
         imagen = request.form['imagen']
         precio = request.form['precio']
         descripcion = request.form['descripcion']
-        # Imprimir el HTML correspondiente al producto seleccionado
         print(render_template('product-details.html', nombre=nombre, imagen=imagen, precio=precio, descripcion=descripcion))
-        return "Compra realizada con éxito"  # Opcional: mensaje de confirmación de compra
+        return "Compra realizada con éxito"
     else:
         nombre = request.args.get('nombre')
         imagen = request.args.get('imagen')
