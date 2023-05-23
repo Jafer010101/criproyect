@@ -6,9 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/tienda.html')
+@app.route('/tienda.html', methods=['GET'])
 def tienda():
     return render_template('tienda.html')
+
 
 @app.route('/product-details.html', methods=['GET', 'POST'])
 def product_details():
